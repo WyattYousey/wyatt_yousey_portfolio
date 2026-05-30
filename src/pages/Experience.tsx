@@ -29,7 +29,7 @@ const Experience = () => {
               <TimelineCard {...card} />
 
               {index < stats.length - 1 && (
-                <ArrowRight size={40} className="shrink-0 text-(--color-text)" />
+                <ArrowRight size={40} className="shrink-0 text-(--color-button-bg)" />
               )}
             </Fragment>
           ))}
@@ -39,7 +39,7 @@ const Experience = () => {
         <h4 className="text-3xl text-(--color-text) ml-10 mt-10">
           Currently Exploring
         </h4>
-        <div className="grid grid-cols-4 place-items-center mt-10 gap-4">
+        <div className="grid grid-cols-4 place-items-center mt-10 gap-8">
           {currentlyExploringItems.map((item) => (
             <Fragment key={item.item}>
               <PillCard {...item} />
