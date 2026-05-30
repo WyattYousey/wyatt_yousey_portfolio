@@ -15,16 +15,28 @@ const Navbar = () => {
         <span className="text-sm font-light">Software Engineer</span>
       </Link>
       <div className="flex gap-7 text-lg pr-5 items-end font-bold">
-        <Link className="text-(--accent-1)" to="/experience">
+        <Link
+          className="text-(--accent-1) hover:text-xl hover:text-shadow-(--accent-1-shadow) transition-all duration-450 ease-in-out"
+          to="/experience"
+        >
           Experience
         </Link>
-        <Link className="text-(--accent-2)" to="/skills">
+        <Link
+          className="text-(--accent-2) hover:text-xl hover:text-shadow-(--accent-2-shadow) transition-all duration-450 ease-in-out"
+          to="/skills"
+        >
           Skills
         </Link>
-        <Link className="text-(--accent-3)" to="/projects">
+        <Link
+          className="text-(--accent-3) hover:text-xl hover:text-shadow-(--accent-3-shadow) transition-all duration-450 ease-in-out"
+          to="/projects"
+        >
           Projects
         </Link>
-        <Link className="text-(--accent-4)" to="/contact">
+        <Link
+          className="text-(--accent-4) hover:text-xl hover:text-shadow-(--accent-4-shadow) transition-all duration-450 ease-in-out"
+          to="/contact"
+        >
           Contact
         </Link>
       </div>

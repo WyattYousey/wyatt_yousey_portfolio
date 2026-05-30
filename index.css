@@ -3,9 +3,13 @@
 :root {
   /* Brand */
   --accent-1: #fd3737;
+  --accent-1-shadow: 0 0 10px #fd3737, 0 0 20px #fd3737;
   --accent-2: #23c4ff;
+  --accent-2-shadow: 0 0 10px #23c4ff, 0 0 20px #23c4ff;
   --accent-3: #82ff69;
+  --accent-3-shadow: 0 0 10px #82ff69, 0 0 20px #82ff69;
   --accent-4: #f70dff;
+  --accent-4-shadow: 0 0 10px#f70dff, 0 0 20px #f70dff;
   --accent-5: #efff0d;
 
   /* Semantic */
