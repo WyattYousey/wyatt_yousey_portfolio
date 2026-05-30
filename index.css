@@ -1,1 +1,16 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+:root {
+  /* Brand */
+  --accent-1: #fd3737;
+  --accent-2: #23c4ff;
+  --accent-3: #82ff69;
+  --accent-4: #f70dff;
+  --accent-5: #efff0d;
+
+  /* Semantic */
+  --color-text: #ffffff;
+  --color-page-bg: #373339;
+  --color-card-bg: #474249;
+  --color-button-bg: #2d2c2e;
+}

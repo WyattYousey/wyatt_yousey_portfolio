@@ -1,10 +1,7 @@
-function App() {
+import AppRoutes from './routes/AppRoutes';
 
-  return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center">
-      <h1 className="text-5xl font-bold">Wyatt Portfolio</h1>
-    </div>
-  );
+function App() {
+  return <AppRoutes />;
 }
 
-export default App
+export default App;
