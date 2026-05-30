@@ -57,7 +57,7 @@ const Home = () => {
           hands-on projects focused on modern software development. Since then,
           I have continued pushing myself through{' '}
           <span className="text-(--accent-4)">real-world projects</span>,{' '}
-          <span className="text(--accent-2)">automation systems</span>, and{' '}
+          <span className="text-(--accent-2)">automation systems</span>, and{' '}
           <span className="text-(--accent-3)">full-stack applications</span>. I
           am passionate about building thoughtful, scalable software and{' '}
           <span className="text-(--accent-4)">constantly improving</span> as
