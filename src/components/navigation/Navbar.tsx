@@ -1,7 +1,19 @@
-import { NavLink} from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import hero from '../../assets/hero-headshot.jpg';
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const titleColorMap: Record<string, string> = {
+    '/': 'var(--color-text)',
+    '/experience': 'var(--accent-1)',
+    '/skills': 'var(--accent-2)',
+    '/projects': 'var(--accent-3)',
+    '/contact': 'var(--accent-4)',
+  };
+
+  const titleColor = titleColorMap[location.pathname] ?? 'var(--color-text)';
+
   return (
     <div className="h-15 flex justify-between bg-(--color-button-bg) text-(--color-text) p-2 items-end">
       <NavLink to="/" className="flex items-end gap-3">
@@ -12,7 +24,12 @@ const Navbar = () => {
           />
         </div>
         <h1 className="text-4xl">Wyatt Yousey</h1>
-        <span className="text-sm font-light">Software Engineer</span>
+        <span
+          style={{ color: titleColor }}
+          className="text-sm font-light transition-colors duration-450 ease-in-out"
+        >
+          Software Engineer
+        </span>
       </NavLink>
       <div className="flex gap-7 text-lg pr-5 items-end font-bold">
         <NavLink
