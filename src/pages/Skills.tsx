@@ -4,6 +4,8 @@ import SkillCard from '../components/cards/SkillCard';
 import { currentWorkflow, skills } from '../data/skills';
 import { ArrowRight } from 'lucide-react';
 
+import { motion } from 'framer-motion';
+
 const Skills = () => {
   return (
     <div>
@@ -42,15 +44,23 @@ const Skills = () => {
           Current Workflow
         </h2>
         <div className="flex gap-10 items-center justify-center mt-15">
-          {currentWorkflow.map((workflow, index) => (
-            <Fragment key={workflow.item}>
-              <PillCard {...workflow} />
+          {currentWorkflow.map((wf, index) => (
+            <Fragment key={wf.item}>
+              <motion.div
+                initial={{ opacity: 0, x: index * -450 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: index * 0.5,
+                  duration: 1,
+                  ease: [0.97, -0.03, 0, 1.03],
+                }}
+              >
+                <PillCard {...wf} />
+              </motion.div>
 
               {index < currentWorkflow.length - 1 && (
-                <ArrowRight
-                  size={40}
-                  className="shrink-0 text-(--color-button-bg)"
-                />
+                <ArrowRight size={45} className="text-(--color-button-bg)" />
               )}
             </Fragment>
           ))}

@@ -3,35 +3,96 @@ import headshot2 from '../assets/headshot-3.jpg';
 import candid1 from '../assets/candid-1.jpg';
 import candid2 from '../assets/candid-2.jpg';
 
+import { motion } from 'framer-motion';
+
 const Home = () => {
   return (
     <div className="flex h-screen">
       <div className="relative h-full">
-        <div className="absolute bottom-28 left-22 w-55 rounded-full overflow-hidden">
+        <motion.div
+          className="absolute bottom-28 left-22 w-55 rounded-full overflow-hidden"
+          initial={{
+            opacity: 0,
+            x: -250,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 1.4,
+            ease: [0.68, -0.55, 0.27, 1.55],
+          }}
+        >
           <img
             src={headshot1}
             alt="Man in glasses leaning against pipe fence smiling"
           />
-        </div>
-        <div className="absolute top-37 left-12 h-68 w-68 rounded-full overflow-hidden">
+        </motion.div>
+        <motion.div
+          className="absolute top-37 left-12 h-68 w-68 rounded-full overflow-hidden"
+          initial={{
+            opacity: 0,
+            x: -250,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 1.4,
+            delay: 0.3,
+            ease: [0.68, -0.55, 0.27, 1.55],
+          }}
+        >
           <img
             src={headshot2}
             alt="Man and Woman Smiling in front of cherry blossom tree"
           />
-        </div>
-        <div className="absolute top-5 left-145 h-55 w-45 rounded-full overflow-hidden">
+        </motion.div>
+        <motion.div
+          className="absolute top-5 left-145 h-55 w-45 rounded-full overflow-hidden"
+          initial={{
+            opacity: 0,
+            y: -350,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1.4,
+            delay: 0.6,
+            ease: [0.68, -0.55, 0.27, 1.55],
+          }}
+        >
           <img
             src={candid1}
             alt="Man holding welding project in welding attire"
           />
-        </div>
-        <div className="absolute bottom-78 left-85 h-75 w-130 rounded-full overflow-hidden">
+        </motion.div>
+        <motion.div
+          className="absolute bottom-78 left-85 h-75 w-130 rounded-full overflow-hidden"
+          initial={{
+            opacity: 0,
+            y: 450,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1.4,
+            delay: 0.9,
+            ease: [0.68, -0.55, 0.27, 1.55],
+          }}
+        >
           <img
             className="object-center object-cover"
             src={candid2}
             alt="Man welding metal with his hood down"
           />
-        </div>
+        </motion.div>
       </div>
       <span className="inline-block h-full w-px bg-(--color-button-bg) m-auto"></span>
       <div className="absolute flex top-45 right-85 flex-col w-100 text-center gap-6 text-(--color-text) font-(--font-primary)">

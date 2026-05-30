@@ -5,10 +5,11 @@ import { timeline } from '../data/experience';
 import StatCard from '../components/cards/StatCard';
 import TimelineCard from '../components/cards/TimelineCard';
 import PillCard from '../components/cards/PillCard';
+import { motion } from 'framer-motion';
 
 const Experience = () => {
   return (
-    <div>
+    <div className="p-6">
       <div>
         <h2 className="text-3xl text-(--color-text) ml-10 mt-10">
           Experience Stats
@@ -26,10 +27,21 @@ const Experience = () => {
         <div className="flex gap-10 items-center justify-center mt-5">
           {timeline.map((card, index) => (
             <Fragment key={card.title}>
-              <TimelineCard {...card} />
+              <motion.div
+                initial={{ opacity: 0, x: -300 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: index * 0.25,
+                  duration: 0.8,
+                  ease: [0.39, 1.91, 0.87, -0.09],
+                }}
+              >
+                <TimelineCard {...card} />
+              </motion.div>
 
-              {index < stats.length - 1 && (
-                <ArrowRight size={40} className="shrink-0 text-(--color-button-bg)" />
+              {index < timeline.length - 1 && (
+                <ArrowRight size={150} className="text-(--color-button-bg)" />
               )}
             </Fragment>
           ))}
