@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import hero from '../../assets/hero-headshot.jpg';
 
 const Navbar = () => {
