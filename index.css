@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/src/assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf')
+    format('truetype');
+  font-style: normal;
+  font-weight: 200 900;
+}
+
 :root {
   /* Brand */
   --accent-1: #fd3737;
@@ -17,4 +25,8 @@
   --color-page-bg: #373339;
   --color-card-bg: #474249;
   --color-button-bg: #2d2c2e;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
 }
