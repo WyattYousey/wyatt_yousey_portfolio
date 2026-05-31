@@ -1,13 +1,13 @@
 export interface Project {
-    id: string;
-    title: string;
-    description: string;
-    stack: string[];
-    status: string;
-    featured: boolean;
-    github?: string;
-    demo?: string;
-    image?: string;
+  id: string;
+  title: string;
+  description: string;
+  stack: string[];
+  status: string;
+  featured: boolean;
+  github?: string;
+  demo?: string;
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -69,5 +69,25 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'DOM Manipulation'],
     status: 'Completed',
     featured: false,
+  },
+];
+
+export interface ProjectTypeData {
+  title: string;
+  accent: string;
+}
+
+export const projectTypeData: ProjectTypeData[] = [
+  {
+    title: 'Full-Stack',
+    accent: '(--accent-1)',
+  },
+  {
+    title: 'Automation',
+    accent: '(--accent-2)',
+  },
+  {
+    title: 'Systems',
+    accent: '(--accent-3)',
   },
 ];
