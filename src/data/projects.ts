@@ -73,21 +73,25 @@ export const projects: Project[] = [
 ];
 
 export interface ProjectTypeData {
-  title: string;
+  item: string;
   accent: string;
+  type?: string;
 }
 
 export const projectTypeData: ProjectTypeData[] = [
   {
-    title: 'Full-Stack',
+    item: 'Full-Stack',
     accent: '(--accent-1)',
+    type: 'word-accent',
   },
   {
-    title: 'Automation',
+    item: 'Automation',
     accent: '(--accent-2)',
+    type: 'word-accent',
   },
   {
-    title: 'Systems',
+    item: 'Systems',
     accent: '(--accent-3)',
+    type: 'word-accent',
   },
 ];

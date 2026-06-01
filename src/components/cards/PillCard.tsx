@@ -1,12 +1,22 @@
-import type { CurrentlyExploringItems } from '../../data/experience';
+import type { ProjectTypeData } from '../../data/projects';
 
-const PillCard = ({ item, accent }: CurrentlyExploringItems) => {
+const PillCard = ({ item, accent, type }: ProjectTypeData) => {
+  interface PillStyle {
+    border?: string;
+    color?: string;
+  }
+
+  const pillStyle: PillStyle =
+    type === 'word-accent'
+      ? { color: `var${accent}`, border: '1px solid black' }
+      : { color: 'var(--color-text)', border: `1px solid var${accent}` };
+
   return (
-      <div
-          style={{ border: `1px solid var${accent}`}}
-      className='flex items-center justify-center rounded-4xl bg-(--color-card-bg) py-4 w-65'
+    <div
+      style={pillStyle}
+      className="flex items-center justify-center rounded-4xl bg-(--color-card-bg) py-4 w-65"
     >
-      <p className='text-(--color-text) text-lg font-bold'>{item}</p>
+      <p className="text-lg font-bold">{item}</p>
     </div>
   );
 };
