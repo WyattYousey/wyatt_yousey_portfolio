@@ -53,14 +53,14 @@ const ProjectCard = ({
         </div>
         <p
           style={{
-            color: `var${accent}`,
+            color: accent,
           }}
         >
           {status}
         </p>
-        <img className='w-125' src={img} alt="Preview image for projects" />
+        <img className="w-125" src={img} alt="Preview image for projects" />
       </div>
-      <div className='flex flex-col justify-evenly'>
+      <div className="flex flex-col justify-evenly">
         <p className="max-w-120">{description}</p>
         <div className="flex gap-15 justify-center">
           {github && <Button text={'GitHub'} link={github} />}
