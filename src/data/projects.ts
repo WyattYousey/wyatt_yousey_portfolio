@@ -39,6 +39,8 @@ export const projects: Project[] = [
     status: 'Completed',
     featured: false,
     img: wtwrImg,
+    github: 'https://github.com/WyattYousey/se_project_react_WTWR',
+    demo: 'https://whatstheweather.flowtemp.ro/',
   },
 
   {
@@ -50,6 +52,7 @@ export const projects: Project[] = [
     status: 'Experimental',
     featured: false,
     img: afriImg,
+    github: 'https://github.com/WyattYousey/se_project_AFRI',
   },
 
   {
@@ -61,6 +64,7 @@ export const projects: Project[] = [
     status: 'Experimental',
     featured: false,
     img: rteImg,
+    github: 'https://github.com/WyattYousey/se_project_Glyph',
   },
 
   {
@@ -72,6 +76,7 @@ export const projects: Project[] = [
     status: 'Prototype',
     featured: false,
     img: asteroidsImg,
+    github: 'https://github.com/WyattYousey/asteroids_in_js',
   },
 
   {
@@ -83,6 +88,8 @@ export const projects: Project[] = [
     status: 'Completed',
     featured: false,
     img: tetrisImg,
+    github: 'https://github.com/WyattYousey/se_project_tetris_game',
+    demo: 'https://WyattYousey.github.io/se_project_tetris_game',
   },
 ];
 
