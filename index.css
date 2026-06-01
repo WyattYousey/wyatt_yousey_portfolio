@@ -25,6 +25,8 @@
   --color-page-bg: #373339;
   --color-card-bg: #474249;
   --color-button-bg: #2d2c2e;
+  --color-button-bg-hover: #323133;
+  --shadow-button-hover: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
 }
 
 body {
