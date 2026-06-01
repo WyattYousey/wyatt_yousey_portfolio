@@ -5,9 +5,10 @@ interface CompactProjectCard {
   title: string;
   stack: string[];
   status: string;
+  onClick: () => void;
 }
 
-const CompactProjectCard = ({ title, stack, status }: CompactProjectCard) => {
+const CompactProjectCard = ({ title, stack, status, onClick }: CompactProjectCard) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const accent = (() => {
@@ -40,6 +41,7 @@ const CompactProjectCard = ({ title, stack, status }: CompactProjectCard) => {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
       className="flex flex-col gap-6 border bg-(--color-card-bg) text-(--color-text) hover:cursor-pointer rounded-lg p-6 transition-all duration-450 ease-in-out"
       style={{
         border: isHovered ? `1px solid var${accent}` : '1px solid black',
