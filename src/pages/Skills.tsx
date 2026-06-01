@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const Skills = () => {
   return (
-    <div>
+    <div className="p-6">
       <div>
         <h2 className="text-3xl text-(--color-text) ml-10 mt-10">
           Core Technologies

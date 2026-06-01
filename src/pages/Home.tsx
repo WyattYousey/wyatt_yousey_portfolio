@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen p-6">
       <div className="relative h-full">
         <motion.div
           className="absolute bottom-28 left-22 w-55 rounded-full overflow-hidden"

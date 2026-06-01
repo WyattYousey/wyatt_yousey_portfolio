@@ -21,10 +21,10 @@ const Experience = () => {
         </div>
       </div>
       <div>
-        <h3 className="text-3xl text-(--color-text) ml-10 mt-10">
+        <h3 className="text-3xl text-(--color-text) ml-10 mt-5">
           Experience Timeline
         </h3>
-        <div className="flex gap-10 items-center justify-center mt-5">
+        <div className="flex gap-10 items-center justify-center mt-15">
           {timeline.map((card, index) => (
             <Fragment key={card.title}>
               <motion.div
