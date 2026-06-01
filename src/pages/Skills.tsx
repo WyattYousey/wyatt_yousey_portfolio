@@ -23,7 +23,7 @@ const Skills = () => {
         <h2 className="text-3xl text-(--color-text) ml-10 mt-10">
           What I Enjoy Building?
         </h2>
-        <p className="text-(--color-text) ml-12 mt-10">
+        <p className="text-(--color-text) text-xl ml-12 mt-10 tracking-[1.5px]">
           I enjoy building software that feels both practical and thoughtful,
           from{' '}
           <span className="text-(--accent-1)">full-stack applications</span> and{' '}
@@ -70,7 +70,7 @@ const Skills = () => {
         <h2 className="text-3xl text-(--color-text) ml-10 mt-10">
           Outside the IDE
         </h2>
-        <p className="text-(--color-text) ml-12 mt-10">
+        <p className="text-(--color-text) text-xl ml-12 mt-10 tracking-[1.5px]">
           Outside of software, I enjoy long walks, time with my four dogs, and
           finding opportunities to slow down and recharge. Stepping away from
           the screen often gives me the clarity and perspective I need to tackle

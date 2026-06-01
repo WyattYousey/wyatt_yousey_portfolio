@@ -21,23 +21,23 @@ const Projects = () => {
     <div className="p-6">
       <div>
         <h2 className="text-3xl text-(--color-text) ml-10 mt-10">Projects</h2>
-        <p className="text-(--color-text) text-xl ml-14 mt-3">
+        <p className="text-(--color-text) text-2xl ml-14 mt-3 tracking-[1.5px]">
           A collection of applications, systems, and experiments focused on
           automation, full-stack engineering, and problem solving.
         </p>
-        <div className="flex gap-10 items-center justify-center mt-5">
+        <div className="flex gap-10 items-center justify-center mt-20">
           {projectTypeData.map((projectType) => (
             <PillCard key={projectType.item} {...projectType} />
           ))}
         </div>
       </div>
-      <div className="flex justify-center gap-4 mt-8">
+      <div className="mt-8 ml-10">
         {view === 'all' && (
           <button
             onClick={() => setView('featured')}
             className="px-4 py-2 text-(--color-text) font-bold text-2xl border border-(--color-text) rounded-md bg-(--color-button-bg) hover:text-(--color-button-bg-hover) hover:text-3xl hover:cursor-pointer hover:text-shadow-(--shadow-button-hover) transition-all duration-450 ease-in-out"
           >
-            Featured Project
+            Featured Project{'->'}
           </button>
         )}
 
@@ -46,7 +46,7 @@ const Projects = () => {
             onClick={() => setView('all')}
             className="px-4 py-2 text-(--color-text) font-bold text-2xl border border-(--color-text) rounded-md bg-(--color-button-bg) hover:text-(--color-button-bg-hover) hover:text-3xl hover:cursor-pointer hover:text-shadow-(--shadow-button-hover) transition-all duration-450 ease-in-out"
           >
-            Project Library
+            Project Library{'->'}
           </button>
         )}
       </div>

@@ -97,7 +97,7 @@ const Home = () => {
       <span className="inline-block h-full w-px bg-(--color-button-bg) m-auto"></span>
       <div className="absolute flex top-45 right-85 flex-col w-100 text-center gap-6 text-(--color-text) font-(--font-primary)">
         <h2 className="text-3xl font-(--font-primary)">About Me</h2>
-        <p className="text-left font-(--font-primary)">
+        <p className="text-left font-(--font-primary) tracking-[1.5px]">
           Two years ago, I transitioned into software engineering after working
           in the manufacturing industry in welding and quality control. I was
           looking for a{' '}
@@ -106,11 +106,11 @@ const Home = () => {
           <span className="text-(--accent-2)">problem-solving</span>, and the
           process of building real systems from the ground up. My background
           taught me <span className="text-(--accent-3)">discipline</span>,{' '}
-          <span className="text(--accent-2)">attention to detail</span>, and how
+          <span className="text-(--accent-2)">attention to detail</span>, and how
           to <span className="text-(--accent-4)">perform under pressure</span>,
           qualities that continue to shape the way I approach development today.
         </p>
-        <p className="text-left">
+        <p className="text-left tracking-[1.5px]">
           I began by teaching myself programming independently before pursuing a
           more <span className="text-(--accent-3)">structured education</span>{' '}
           through TripleTen, where I completed{' '}
