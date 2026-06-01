@@ -6,7 +6,7 @@ interface Props {
 
 const MiscCard = ({ children }: Props) => {
   return (
-    <div className="p-6 bg-(--color-card-bg) border border-black text-(--color-text)">
+    <div className=" flex flex-col w-fit mt-10 py-4 px-8 rounded-xl bg-(--color-card-bg) border border-black text-(--color-text)">
       {children}
     </div>
   );
