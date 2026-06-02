@@ -16,7 +16,7 @@ const PillCard = ({ item, accent, type }: ProjectTypeData) => {
       style={pillStyle}
       className="flex items-center justify-center rounded-4xl bg-(--color-card-bg) py-4 w-65"
     >
-      <p className="text-lg font-bold">{item}</p>
+      <p className="typography-body typography-strong">{item}</p>
     </div>
   );
 };

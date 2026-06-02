@@ -8,7 +8,12 @@ interface CompactProjectCard {
   onClick: () => void;
 }
 
-const CompactProjectCard = ({ title, stack, status, onClick }: CompactProjectCard) => {
+const CompactProjectCard = ({
+  title,
+  stack,
+  status,
+  onClick,
+}: CompactProjectCard) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const accent = (() => {
@@ -54,8 +59,8 @@ const CompactProjectCard = ({ title, stack, status, onClick }: CompactProjectCar
           : '',
       }}
     >
-      <p className="text-2xl font-black">{verifiedTitle}</p>
-      <div className="flex gap-3 items-center justify-center font-semibold">
+      <p className="typography-large typography-strong">{verifiedTitle}</p>
+      <div className="flex gap-3 items-center justify-center typography-bodt">
         {stack.map((item, index) => (
           <Fragment key={item}>
             <p>{item}</p>

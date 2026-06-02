@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <div className="p-6">
       <div>
-        <h2 className="text-3xl text-(--color-text) ml-10 mt-10">
+        <h2 className="typography-heading text-(--color-text) ml-10 mt-10">
           Core Technologies
         </h2>
         <div className="flex gap-15 items-center justify-center mt-5">
@@ -20,10 +20,10 @@ const Skills = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-3xl text-(--color-text) ml-10 mt-10">
+        <h2 className="typography-heading text-(--color-text) ml-10 mt-10">
           What I Enjoy Building?
         </h2>
-        <p className="text-(--color-text) text-xl ml-12 mt-10 tracking-[1.5px]">
+        <p className="typography-body text-(--color-text) ml-12 mt-10 tracking-[1.5px]">
           I enjoy building software that feels both practical and thoughtful,
           from{' '}
           <span className="text-(--accent-1)">full-stack applications</span> and{' '}
@@ -40,7 +40,7 @@ const Skills = () => {
         </p>
       </div>
       <div>
-        <h2 className="text-3xl text-(--color-text) ml-10 mt-10">
+        <h2 className="typography-heading text-(--color-text) ml-10 mt-10">
           Current Workflow
         </h2>
         <div className="flex gap-10 items-center justify-center mt-15">
@@ -67,10 +67,10 @@ const Skills = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-3xl text-(--color-text) ml-10 mt-10">
+        <h2 className="typography-heading text-(--color-text) ml-10 mt-10">
           Outside the IDE
         </h2>
-        <p className="text-(--color-text) text-xl ml-12 mt-10 tracking-[1.5px]">
+        <p className="typography-body text-(--color-text) ml-12 mt-10 tracking-[1.5px]">
           Outside of software, I enjoy long walks, time with my four dogs, and
           finding opportunities to slow down and recharge. Stepping away from
           the screen often gives me the clarity and perspective I need to tackle

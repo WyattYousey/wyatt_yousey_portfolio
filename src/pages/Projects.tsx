@@ -20,8 +20,10 @@ const Projects = () => {
   return (
     <div className="p-6">
       <div>
-        <h2 className="text-3xl text-(--color-text) ml-10 mt-10">Projects</h2>
-        <p className="text-(--color-text) text-2xl ml-14 mt-3 tracking-[1.5px]">
+        <h2 className="typography-heading text-(--color-text) ml-10 mt-10">
+          Projects
+        </h2>
+        <p className="typography-large text-(--color-text) ml-14 mt-3 tracking-[1.5px]">
           A collection of applications, systems, and experiments focused on
           automation, full-stack engineering, and problem solving.
         </p>
@@ -35,7 +37,7 @@ const Projects = () => {
         {view === 'all' && (
           <button
             onClick={() => setView('featured')}
-            className="px-4 py-2 text-(--color-text) font-bold text-2xl border border-(--color-text) rounded-md bg-(--color-button-bg) hover:text-(--color-button-bg-hover) hover:text-3xl hover:cursor-pointer hover:text-shadow-(--shadow-button-hover) transition-all duration-450 ease-in-out"
+            className="px-4 py-2 text-(--color-text) typography-button border border-(--color-text) rounded-md bg-(--color-button-bg) hover:text-(--color-button-bg-hover) hover:cursor-pointer hover:text-shadow-(--shadow-button-hover) transition-all duration-450 ease-in-out"
           >
             Featured Project{'->'}
           </button>
@@ -44,7 +46,7 @@ const Projects = () => {
         {view === 'featured' && (
           <button
             onClick={() => setView('all')}
-            className="px-4 py-2 text-(--color-text) font-bold text-2xl border border-(--color-text) rounded-md bg-(--color-button-bg) hover:text-(--color-button-bg-hover) hover:text-3xl hover:cursor-pointer hover:text-shadow-(--shadow-button-hover) transition-all duration-450 ease-in-out"
+            className="px-4 py-2 text-(--color-text) typography-button border border-(--color-text) rounded-md bg-(--color-button-bg) hover:text-(--color-button-bg-hover) hover:cursor-pointer hover:text-shadow-(--shadow-button-hover) transition-all duration-450 ease-in-out"
           >
             Project Library{'->'}
           </button>
@@ -73,7 +75,7 @@ const Projects = () => {
               duration: 0.8,
             }}
           >
-            <h3 className="text-3xl text-(--color-text) ml-10 mt-10">
+            <h3 className="typography-heading text-(--color-text) ml-10 mt-10">
               Featured Project
             </h3>
 
@@ -103,7 +105,7 @@ const Projects = () => {
               duration: 0.8,
             }}
           >
-            <h3 className="text-3xl text-(--color-text) ml-10 mt-10">
+            <h3 className="typography-heading text-(--color-text) ml-10 mt-10">
               Project Library
             </h3>
 

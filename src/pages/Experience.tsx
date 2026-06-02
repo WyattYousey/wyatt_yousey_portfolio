@@ -11,7 +11,7 @@ const Experience = () => {
   return (
     <div className="p-6">
       <div>
-        <h2 className="text-3xl text-(--color-text) ml-10 mt-10">
+        <h2 className="typography-heading text-(--color-text) ml-10 mt-10">
           Experience Stats
         </h2>
         <div className="flex gap-15 items-center justify-center mt-5">
@@ -21,7 +21,7 @@ const Experience = () => {
         </div>
       </div>
       <div>
-        <h3 className="text-3xl text-(--color-text) ml-10 mt-5">
+        <h3 className="typography-heading text-(--color-text) ml-10 mt-5">
           Experience Timeline
         </h3>
         <div className="flex gap-10 items-center justify-center mt-15">
@@ -48,7 +48,7 @@ const Experience = () => {
         </div>
       </div>
       <div>
-        <h4 className="text-3xl text-(--color-text) ml-10 mt-10">
+        <h4 className="typography-heading text-(--color-text) ml-10 mt-10">
           Currently Exploring
         </h4>
         <div className="grid grid-cols-4 place-items-center mt-10 gap-8">

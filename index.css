@@ -27,8 +27,41 @@
   --color-button-bg: #2d2c2e;
   --color-button-bg-hover: #323133;
   --shadow-button-hover: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+
+  /* Typography */
+  --font-size-body: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-heading: 1.75rem;
+  --font-weight-normal: 400;
+  --font-weight-strong: 700;
 }
 
 body {
   font-family: 'Inconsolata', monospace;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-normal);
+}
+
+.typography-body {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-normal);
+}
+
+.typography-large {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-normal);
+}
+
+.typography-heading {
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-strong);
+}
+
+.typography-button {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-strong);
+}
+
+.typography-strong {
+  font-weight: var(--font-weight-strong);
 }

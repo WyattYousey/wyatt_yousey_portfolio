@@ -40,7 +40,7 @@ const ProjectCard = ({
             }}
             className={`inline-block rounded-full h-6 w-6`}
           ></span>
-          <p className="font-bold text-2xl">{title}</p>
+          <p className="typography-large typography-strong">{title}</p>
         </div>
         <div className="flex gap-3 items-center">
           {stack.map((item, index) => (

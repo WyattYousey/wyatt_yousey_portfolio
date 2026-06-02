@@ -113,7 +113,7 @@ const ContactFormCard = ({ nameInput, emailInput, messageInput }: Inputs) => {
     <motion.form
       id="contact-form"
       onSubmit={handleSubmit}
-      className="flex flex-col m-auto mt-10 gap-4 text-xl w-fit text-(--color-text)"
+      className="flex flex-col m-auto mt-10 gap-4 typography-body w-fit text-(--color-text)"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -187,7 +187,7 @@ const ContactFormCard = ({ nameInput, emailInput, messageInput }: Inputs) => {
             stiffness: 200,
             damping: 10,
           }}
-          className="absolute bottom-2 right-5 px-4 py-2 text-(--color-text) font-bold text-2xl border border-(--color-text) rounded-md bg-(--color-button-bg) hover:text-(--color-button-bg-hover) hover:text-3xl hover:cursor-pointer hover:text-shadow-(--shadow-button-hover) transition-all duration-450 ease-in-out"
+          className="absolute bottom-2 right-5 px-4 py-2 text-(--color-text) typography-button border border-(--color-text) rounded-md bg-(--color-button-bg) hover:text-(--color-button-bg-hover) hover:cursor-pointer hover:text-shadow-(--shadow-button-hover) transition-all duration-450 ease-in-out"
           type="submit"
         >
           {isSending ? 'Sending...' : 'Send'}
