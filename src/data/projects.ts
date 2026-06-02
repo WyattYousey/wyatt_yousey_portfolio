@@ -34,7 +34,7 @@ export const projects: Project[] = [
     id: 'wtwr',
     title: 'WTWR',
     description:
-      'Full-stack weather-driven wardrobe application with authentication, API integrations, and persistent data storage.',
+      'Built a full-stack weather-driven wardrobe recommendation platform that dynamically suggests outfits based on real-time weather conditions. Implemented secure authentication, RESTful API integration, and persistent user data storage using MongoDB. Focused on creating a seamless end-to-end user experience with responsive UI and reliable backend architecture.',
     stack: ['MongoDB', 'Express', 'React', 'Node.js'],
     status: 'Completed',
     featured: false,
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     id: 'ai-regression-inspector',
     title: 'AI Frontend Regression Inspector',
     description:
-      'Experimental tool leveraging Gemini API image analysis to identify potential visual regressions in UI workflows.',
+      'Experimental tool that leverages the Gemini API to analyze UI screenshots and detect potential visual regressions across frontend workflows. Designed to explore AI-assisted quality assurance by automating visual comparison tasks typically done manually. Built as a proof-of-concept to test the intersection of computer vision and frontend development.',
     stack: ['React', 'JavaScript', 'Gemini API'],
     status: 'Experimental',
     featured: false,
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     id: 'rich-text-editor',
     title: 'Rich Text Editor',
     description:
-      'Experimental editor focused on advanced state management and extensibility using Slate.js.',
+      'Advanced rich text editor built to explore complex state management and extensible editor architecture using Slate.js. Focused on building a highly customizable editing experience with fine-grained control over formatting and document structure. Leveraged Zustand and TypeScript to manage scalable client-side state without a backend dependency.',
     stack: ['TypeScript', 'Slate', 'TailwindCSS', 'Zustand'],
     status: 'Experimental',
     featured: false,
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     id: 'asteroids-engine',
     title: 'Asteroids Engine',
     description:
-      'Modular browser-based game engine emphasizing maintainable architecture and reusable systems.',
+      'Modular browser-based game engine designed with a strong emphasis on reusable systems and scalable architecture. Built core gameplay loops, entity management, and rendering systems with maintainability as the primary focus. Serves as an exploration into how game engine architecture translates into vanilla JavaScript environments.',
     stack: ['JavaScript', 'Game Architecture'],
     status: 'Prototype',
     featured: false,
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     id: 'tetris',
     title: 'Tetris',
     description:
-      'A foundational JavaScript project focused on game loops, state management, and collision detection.',
+      'Rebuilt the classic Tetris game in JavaScript to deepen understanding of game loops, collision detection, and state-driven UI updates. Implemented core gameplay mechanics from scratch with a focus on clean logic separation and predictable state transitions. Used DOM manipulation and vanilla JavaScript to reinforce foundational frontend engineering concepts.',
     stack: ['JavaScript', 'DOM Manipulation'],
     status: 'Completed',
     featured: false,

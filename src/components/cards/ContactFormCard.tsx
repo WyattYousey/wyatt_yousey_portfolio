@@ -128,7 +128,7 @@ const ContactFormCard = ({ nameInput, emailInput, messageInput }: Inputs) => {
         <input
           className="w-300 focus:outline-1 focus:outline-black rounded-md pl-2 text-(--color-text) focus:bg-(--color-button-bg)"
           type="text"
-          name="nameData"
+          name="name"
           id="name"
           value={formData.name}
           onChange={handleChange}
@@ -149,7 +149,7 @@ const ContactFormCard = ({ nameInput, emailInput, messageInput }: Inputs) => {
           type="email"
           value={formData.email}
           onChange={handleChange}
-          name="emailData"
+          name="email"
           id="email"
           autoComplete="email"
           required
@@ -163,7 +163,7 @@ const ContactFormCard = ({ nameInput, emailInput, messageInput }: Inputs) => {
         {messageInput}
         <textarea
           className="w-275 max-h-35 focus:outline-1 focus:outline-black rounded-md pl-2 text-(--color-text) focus:bg-(--color-button-bg)"
-          name="messageData"
+          name="message"
           id="message"
           value={formData.message}
           onChange={handleChange}
