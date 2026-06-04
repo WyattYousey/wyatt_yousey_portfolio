@@ -1,6 +1,7 @@
 import { Fragment } from 'react/jsx-runtime';
 import type { Project } from '../../data/projects';
 import Button from '../ui/Button';
+import { screenBreakMap } from '../../data/screenBreaks';
 
 const ProjectCard = ({
   title,
@@ -30,15 +31,16 @@ const ProjectCard = ({
     }
   })();
 
+  const screenWidth = window.innerWidth;
   return (
-    <div className="flex gap-8 bg-(--color-card-bg) p-4 rounded-xl border-black w-200 text-(--color-text) m-auto mt-5">
+    <div className={`flex ${screenWidth < screenBreakMap.largeTablet ? 'flex-col w-fit' : ''} gap-8 bg-(--color-card-bg) p-4 rounded-xl border-black w-200 text-(--color-text) m-auto mt-5`}>
       <div className="flex flex-col gap-6">
         <div className="flex flex-row gap-2 items-center">
           <span
             style={{
               backgroundColor: `${accent}`,
             }}
-            className={`inline-block rounded-full h-6 w-6`}
+            className={'inline-block rounded-full h-6 w-6'}
           ></span>
           <p className="typography-large typography-strong">{title}</p>
         </div>
