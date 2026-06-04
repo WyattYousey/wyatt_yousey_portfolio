@@ -2,15 +2,22 @@ import headshot1 from '../assets/secondary-headshot.jpg';
 import headshot2 from '../assets/headshot-3.jpg';
 import candid1 from '../assets/candid-1.jpg';
 import candid2 from '../assets/candid-2.jpg';
+import { screenBreakMap } from '../data/screenBreaks';
 
 import { motion } from 'framer-motion';
 
 const Home = () => {
+  const screenWidth = window.innerWidth;
+
   return (
-    <div className="flex h-screen p-6">
-      <div className="relative h-full">
+    <div
+      className={`flex ${screenWidth < screenBreakMap.mediumDesktop ? 'justify-center' : ' justify-between'} h-screen w-full p-6`}
+    >
+      <div
+        className={`relative ${screenWidth < screenBreakMap.mediumDesktop ? 'w-full h-full' : ''}`}
+      >
         <motion.div
-          className="absolute bottom-28 left-22 w-55 rounded-full overflow-hidden"
+          className={`absolute ${screenWidth < screenBreakMap.largeTablet ? 'bottom-28 left-22 w-55' : screenWidth < screenBreakMap.smallDesktop ? 'bottom-25 left-0 w-85' : 'bottom-28 left-22 w-55'} rounded-full overflow-hidden`}
           initial={{
             opacity: 0,
             x: -250,
@@ -30,7 +37,7 @@ const Home = () => {
           />
         </motion.div>
         <motion.div
-          className="absolute top-37 left-12 h-68 w-68 rounded-full overflow-hidden"
+          className={`absolute ${screenWidth < screenBreakMap.largeTablet ? 'top-25 left-15 h-55 w-40' : screenWidth < screenBreakMap.smallDesktop ? 'top-15 left-25 h-82 w-82' : 'top-37 left-12 h-68 w-68'} rounded-full overflow-hidden`}
           initial={{
             opacity: 0,
             x: -250,
@@ -51,7 +58,7 @@ const Home = () => {
           />
         </motion.div>
         <motion.div
-          className="absolute top-5 left-145 h-55 w-45 rounded-full overflow-hidden"
+          className={`absolute ${screenWidth < screenBreakMap.largeTablet ? 'top-45 right-0 h-35 w-25' : screenWidth < screenBreakMap.smallDesktop ? 'top-45 right-0 h-65 w-45' : screenWidth < screenBreakMap.mediumDesktop ? 'top-25 right-10 h-65 w-55' : 'top-25 left-145 h-55 w-45'} rounded-full overflow-hidden`}
           initial={{
             opacity: 0,
             y: -350,
@@ -72,7 +79,7 @@ const Home = () => {
           />
         </motion.div>
         <motion.div
-          className="absolute bottom-78 left-85 h-75 w-130 rounded-full overflow-hidden"
+          className={`absolute ${screenWidth < screenBreakMap.largeTablet ? 'bottom-75 right-0 h-45 w-95' : screenWidth < screenBreakMap.smallDesktop ? 'bottom-10 right-0 h-50 w-65' : screenWidth < screenBreakMap.mediumDesktop ? 'bottom-10 right-0 h-95 w-145' : 'bottom-45 left-85 h-75 w-130'} rounded-full overflow-hidden`}
           initial={{
             opacity: 0,
             y: 450,
@@ -94,8 +101,15 @@ const Home = () => {
           />
         </motion.div>
       </div>
-      <span className='inline-block border-l border-(--color-button-bg) absolute right-220 top-20 h-220'></span>
-      <div className="absolute right-65 top-45 flex flex-col w-100 text-center gap-6 text-(--color-text) font-(--font-primary)">
+      {screenWidth < screenBreakMap.mediumDesktop && (
+        <div className="absolute w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black opacity-70"></div>
+      )}
+      {screenWidth > screenBreakMap.largeDesktop && (
+        <span className="inline-block border-l border-(--color-button-bg) absolute right-220 top-20 h-220"></span>
+      )}
+      <div
+        className={`flex flex-col w-100 text-center gap-6 text-(--color-text) font-(--font-primary) z-50 ${screenWidth > screenBreakMap.mediumDesktop ? 'mr-65 mt-25' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-20'}`}
+      >
         <h2 className="typography-heading font-(--font-primary)">About Me</h2>
         <p className="text-left font-(--font-primary) tracking-[1.5px]">
           Two years ago, I transitioned into software engineering after working
