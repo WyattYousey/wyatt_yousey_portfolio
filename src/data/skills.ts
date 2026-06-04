@@ -5,6 +5,7 @@ import javaIcon from '../assets/java-logo.svg';
 import pythonIcon from '../assets/python-logo.svg';
 import mongoIcon from '../assets/mongodb-logo.svg';
 import gitIcon from '../assets/git-logo.svg';
+import typescriptIcon from '../assets/typescript-logo.svg';
 
 export interface Skill {
   icon: string;
@@ -39,6 +40,10 @@ export const skills: Skill[] = [
   {
     icon: gitIcon,
     title: 'Git',
+  },
+  {
+    icon: typescriptIcon,
+    title: 'TypeScript',
   },
 ];
 
