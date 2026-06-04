@@ -1,6 +1,7 @@
 import ContactFormCard from '../components/cards/ContactFormCard';
 import MiscCard from '../components/cards/MiscCard';
 import { contact } from '../data/contact';
+import { screenBreakMap } from '../data/screenBreaks';
 
 const Contact = () => {
   type ContactKey = keyof typeof contact;
@@ -9,8 +10,11 @@ const Contact = () => {
     return (window.location.href = contact[contactKey]);
   };
 
+  const screenWidth = window.innerWidth;
   return (
-    <div className="p-6">
+    <div
+      className={`p-6 ${screenWidth < screenBreakMap.largePhone ? 'mt-25' : 'mt-5'}`}
+    >
       <div>
         <h2 className="typography-heading text-(--color-text) ml-10 mt-10">
           Contact Me
@@ -32,7 +36,7 @@ const Contact = () => {
           messageInput="Message:"
         />
       </div>
-      <div className="flex justify-around">
+      <div className={`flex ${screenWidth < screenBreakMap.largePhone ? 'flex-col gap-10': 'justify-around'}`}>
         <div className="flex flex-col items-center">
           <h4 className="typography-heading text-(--color-text) ml-10 mt-10">
             Other Contact Methods
