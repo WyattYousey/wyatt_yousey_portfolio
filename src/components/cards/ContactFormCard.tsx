@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion, type Variants } from 'framer-motion';
+import { screenBreakMap } from '../../data/screenBreaks';
 
 interface Inputs {
   nameInput: string;
@@ -109,6 +110,8 @@ const ContactFormCard = ({ nameInput, emailInput, messageInput }: Inputs) => {
     }
   };
 
+  const screenWidth = window.innerWidth;
+
   return (
     <motion.form
       id="contact-form"
@@ -126,7 +129,7 @@ const ContactFormCard = ({ nameInput, emailInput, messageInput }: Inputs) => {
       >
         {nameInput}
         <input
-          className="w-300 focus:outline-1 focus:outline-black rounded-md pl-2 text-(--color-text) focus:bg-(--color-button-bg)"
+          className={`${screenWidth < screenBreakMap.largeTablet ? 'w-65' : screenWidth < screenBreakMap.mediumDesktop ? 'w-125' : 'w-300'}  focus:outline-1 focus:outline-black rounded-md pl-2 text-(--color-text) focus:bg-(--color-button-bg)`}
           type="text"
           name="name"
           id="name"
@@ -145,7 +148,7 @@ const ContactFormCard = ({ nameInput, emailInput, messageInput }: Inputs) => {
       >
         {emailInput}
         <input
-          className="w-300 focus:outline-1 focus:outline-black rounded-md pl-2 text-(--color-text) focus:bg-(--color-button-bg)"
+          className={`${screenWidth < screenBreakMap.largeTablet ? 'w-55' : screenWidth < screenBreakMap.mediumDesktop ? 'w-125' : 'w-300'}  focus:outline-1 focus:outline-black rounded-md pl-2 text-(--color-text) focus:bg-(--color-button-bg)`}
           type="email"
           value={formData.email}
           onChange={handleChange}
@@ -162,7 +165,7 @@ const ContactFormCard = ({ nameInput, emailInput, messageInput }: Inputs) => {
       >
         {messageInput}
         <textarea
-          className="w-275 max-h-35 focus:outline-1 focus:outline-black rounded-md pl-2 text-(--color-text) focus:bg-(--color-button-bg)"
+          className={`${screenWidth < screenBreakMap.largeTablet ? 'w-50' : screenWidth < screenBreakMap.mediumDesktop ? 'w-125' : 'w-300'} focus:outline-1 focus:outline-black rounded-md pl-2 text-(--color-text) focus:bg-(--color-button-bg)`}
           name="message"
           id="message"
           value={formData.message}
