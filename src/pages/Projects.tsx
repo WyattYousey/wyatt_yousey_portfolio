@@ -4,6 +4,7 @@ import { projects, projectTypeData, type Project } from '../data/projects';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import CompactProjectCard from '../components/cards/CompactProjectCard';
+import { screenBreakMap } from '../data/screenBreaks';
 
 const Projects = () => {
   const [view, setView] = useState<'featured' | 'all'>('featured');
@@ -17,8 +18,12 @@ const Projects = () => {
     (project) => !project.featured
   );
 
+  const screenWidth = window.innerWidth;
+
   return (
-    <div className="p-6">
+    <div
+      className={`p-6 ${screenWidth < screenBreakMap.largePhone ? 'mt-25' : 'mt-5'}`}
+    >
       <div>
         <h2 className="typography-heading text-(--color-text) ml-10 mt-10">
           Projects
@@ -27,7 +32,9 @@ const Projects = () => {
           A collection of applications, systems, and experiments focused on
           automation, full-stack engineering, and problem solving.
         </p>
-        <div className="flex gap-10 items-center justify-center mt-20">
+        <div
+          className={`flex ${screenWidth < screenBreakMap.largePhone ? 'gap-1' : 'gap-10'} items-center justify-center mt-20`}
+        >
           {projectTypeData.map((projectType) => (
             <PillCard key={projectType.item} {...projectType} />
           ))}
@@ -109,7 +116,9 @@ const Projects = () => {
               Project Library
             </h3>
 
-            <div className="flex gap-10 justify-center mt-32">
+            <div
+              className={`${screenWidth < screenBreakMap.largeDesktop ? 'grid grid-cols-1 gap-4 place-items-center' : 'flex gap-10 justify-center'} mt-20`}
+            >
               {otherProjects.map((project) => (
                 <CompactProjectCard
                   onClick={() => setCurrentProject(project)}
