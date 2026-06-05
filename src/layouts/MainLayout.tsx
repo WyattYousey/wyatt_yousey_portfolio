@@ -6,7 +6,9 @@ export function MainLayout() {
   const screenWidth = window.innerWidth;
 
   return (
-    <div className={`bg-(--color-page-bg) ${screenWidth > screenBreakMap.largeDesktop ? 'h-screen overflow-hidden' : 'h-fit'}`}>
+    <div
+      className={`bg-(--color-page-bg) ${screenWidth > screenBreakMap.largeDesktop ? 'h-screen overflow-hidden' : 'h-screen'}`}
+    >
       <Navbar />
       <main>
         <Outlet />

@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div
-      className={`flex ${screenWidth < screenBreakMap.mediumDesktop ? 'justify-center' : ' justify-between'} h-screen w-full p-6`}
+      className={`flex ${screenWidth < screenBreakMap.mediumDesktop ? 'justify-center' : ' justify-between'} h-screen w-full p-4`}
     >
       <div
         className={`relative ${screenWidth < screenBreakMap.mediumDesktop ? 'w-full h-full' : ''}`}
@@ -37,7 +37,7 @@ const Home = () => {
           />
         </motion.div>
         <motion.div
-          className={`absolute ${screenWidth < screenBreakMap.largeTablet ? 'top-25 left-15 h-55 w-40' : screenWidth < screenBreakMap.smallDesktop ? 'top-15 left-25 h-82 w-82' : 'top-37 left-12 h-68 w-68'} rounded-full overflow-hidden`}
+          className={`absolute ${screenWidth < screenBreakMap.largeTablet ? 'top-25 left-0 h-55 w-40' : screenWidth < screenBreakMap.smallDesktop ? 'top-15 left-25 h-82 w-82' : 'top-37 left-12 h-68 w-68'} rounded-full overflow-hidden`}
           initial={{
             opacity: 0,
             x: -250,
@@ -102,16 +102,16 @@ const Home = () => {
         </motion.div>
       </div>
       {screenWidth < screenBreakMap.mediumDesktop && (
-        <div className="absolute w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black opacity-70"></div>
+        <div className="absolute w-screen h-screen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black opacity-70"></div>
       )}
       {screenWidth > screenBreakMap.largeDesktop && (
         <span className="inline-block border-l border-(--color-button-bg) absolute right-220 top-20 h-220"></span>
       )}
       <div
-        className={`flex flex-col w-100 text-center gap-6 text-(--color-text) font-(--font-primary) z-50 ${screenWidth > screenBreakMap.mediumDesktop ? 'mr-65 mt-25' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-20'}`}
+        className={`flex flex-col text-center gap-4 text-(--color-text) font-(--font-primary) z-50 ${screenWidth > screenBreakMap.mediumDesktop ? 'mr-65 mt-25 w-100' : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-15 w-80'}`}
       >
         <h2 className="typography-heading font-(--font-primary)">About Me</h2>
-        <p className="text-left font-(--font-primary) tracking-[1.5px]">
+        <p className={`typography-body text-left ${screenWidth < screenBreakMap.mediumDesktop ? 'text-sm' : 'tracking-[1.5px]'}`}>
           Two years ago, I transitioned into software engineering after working
           in the manufacturing industry in welding and quality control. I was
           looking for a{' '}
@@ -125,7 +125,7 @@ const Home = () => {
           <span className="text-(--accent-4)">perform under pressure</span>,
           qualities that continue to shape the way I approach development today.
         </p>
-        <p className="typography-body text-left tracking-[1.5px]">
+        <p className={`typography-body text-left ${screenWidth < screenBreakMap.mediumDesktop ? 'text-sm' : 'tracking-[1.5px]'}`}>
           I began by teaching myself programming independently before pursuing a
           more <span className="text-(--accent-3)">structured education</span>{' '}
           through TripleTen, where I completed{' '}
