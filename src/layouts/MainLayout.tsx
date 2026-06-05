@@ -7,7 +7,7 @@ export function MainLayout() {
 
   return (
     <div
-      className={`bg-(--color-page-bg) ${screenWidth > screenBreakMap.largeDesktop ? 'h-screen overflow-hidden' : 'h-screen'}`}
+      className={`bg-(--color-page-bg) ${screenWidth > screenBreakMap.largeDesktop ? 'h-screen overflow-hidden' : 'h-fit'}`}
     >
       <Navbar />
       <main>
