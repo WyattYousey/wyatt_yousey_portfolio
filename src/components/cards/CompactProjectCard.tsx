@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Fragment } from 'react/jsx-runtime';
+import { screenBreakMap } from '../../data/screenBreaks';
 
 interface CompactProjectCard {
   title: string;
@@ -42,12 +43,14 @@ const CompactProjectCard = ({
     return title;
   })();
 
+  const screenWidth = window.innerWidth;
+
   return (
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
-      className="flex flex-col gap-6 border bg-(--color-card-bg) text-(--color-text) hover:cursor-pointer rounded-lg p-4 transition-all duration-450 ease-in-out"
+      className={`flex flex-col gap-6 border bg-(--color-card-bg) text-(--color-text) hover:cursor-pointer rounded-lg transition-all duration-450 ease-in-out ${screenWidth < screenBreakMap.largePhone ? 'w-75 p-2' : 'p-4'}`}
       style={{
         border: isHovered ? `1px solid var${accent}` : '1px solid black',
 
@@ -60,7 +63,7 @@ const CompactProjectCard = ({
       }}
     >
       <p className="typography-large typography-strong">{verifiedTitle}</p>
-      <div className="flex gap-3 items-center justify-center typography-body">
+      <div className="flex flex-wrap gap-3 items-center justify-center typography-body">
         {stack.map((item, index) => (
           <Fragment key={item}>
             <p>{item}</p>
